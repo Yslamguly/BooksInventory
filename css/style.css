@@ -21,12 +21,30 @@ footer{
 .page-upload .card{
     margin:0 auto;
     width:500px;
-    height:300px;
-
 }
-
+.form-group label{
+    display:block;
+    margin-bottom:0.5rem;
+}
 .form-group{
-    margin:1rem 1rem;
+    margin-bottom:1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
+.form-control{
+    display:block;
+    width: 300px;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #999999;
+}
+
+.btn{
+    display:inline-block;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    background-color: #65d487;
+    
+}
+

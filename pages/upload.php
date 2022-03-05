@@ -6,30 +6,30 @@
     <form method="post" class="card">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" name="name">
+            <input type="text" name="name" class="form-control">
         </div>   
         <div class="form-group">
             <label for="author">Author</label>
-            <input type="text" name="author">
+            <input type="text" name="author" class="form-control">
         </div>
         <div class="form-group">
             <label for="ISBN">ISBN</label>
-            <input type="text" name="ISBN">
+            <input type="text" name="ISBN" class="form-control">
         </div>
         <div class="form-group">
             <label for="releaseDate">Release Date</label>
-            <input type="date" name="releaseDate"> <!--ask-->
+            <input type="date" name="releaseDate" class="form-control"> <!--ask-->
         </div>    
         <div class="form-group">
             <label for="price">Price</label>
-            <input type="number" name="price">
+            <input type="number" name="price" class="form-control">
         </div>
         <div class="form-group">
             <label for="desciption">Desciption</label>
-            <textarea name="description"></textarea>
+            <textarea name="description" class="form-control"></textarea>
         </div>
         <div>
-            <button type="submit">Upload</button>
+            <button type="submit" class="btn">Upload</button>
         </div>
     </form> 
 </div>
