@@ -8,3 +8,25 @@ footer{
     background-color:rgb(212, 196, 176);
     text-align: center;
 }
+.card{
+    display: block;
+    background-color:rgb(163, 235, 238);
+    border-radius:1rem;
+    box-shadow:3px 3px 5px #454545;
+    padding:1rem;
+}
+.page{
+    padding:1rem;
+}
+.page-upload .card{
+    margin:0 auto;
+    width:500px;
+    height:300px;
+
+}
+
+.form-group{
+    margin:1rem 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
