@@ -2,7 +2,9 @@
 
 include_once("function.php");
 
-$page = isset($_GET['p']) ? $_GET['p'] : 'home';
+//if $_GET has 'p' then assign it to $page else assign 'home'
+//$page = isset($_GET['p']) ? $_GET['p'] : 'home';
+$page = ($_GET['p']) ?? 'home';
 
 include_once "./views/_header.php";
 if (file_exists("./pages/{$page}.php"))
