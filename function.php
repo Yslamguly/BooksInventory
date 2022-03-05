@@ -11,3 +11,10 @@ function dump($variable)
     print_r($variable);
     echo "</pre>";
 }
+
+function asset($asset){
+    return BASE_URL . $asset;
+}
+function page_url($page){
+    return BASE_URL . "?p=$page";
+}

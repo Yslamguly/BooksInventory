@@ -3,7 +3,7 @@
 -->
 
 <div class="page page-upload">
-    <form method="post" class="card">
+    <form class="card" action="/test/?p=upload" method="POST">
         <div class="form-group">
             <label for="name">Name</label>
             <input type="text" name="name" class="form-control">

@@ -1,6 +1,7 @@
 <?php
 
-include_once("function.php");
+include_once "config.php";
+include_once "function.php";
 
 //if $_GET has 'p' then assign it to $page else assign 'home'
 //$page = isset($_GET['p']) ? $_GET['p'] : 'home';

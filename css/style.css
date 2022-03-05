@@ -40,11 +40,15 @@ footer{
 }
 
 .btn{
+    cursor: pointer;
     display:inline-block;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    font-size:1rem;
     text-decoration: none;
     background-color: #65d487;
     
 }
-
+.btn:hover{
+    opacity: 0.8;
+}
