@@ -1,7 +1,16 @@
 <!--
     Name,Author,ISBN,ReleaseDate,Price,desciption
 -->
+<?php  
+    if (is_post()){
+        //TODO: validate 
+        //TODO: save values in the database
+        //TODO: success message
 
+        die_dump($_POST);
+    } 
+
+?>
 <div class="page page-upload">
     <form class="card" action="/test/?p=upload" method="POST">
         <div class="form-group">

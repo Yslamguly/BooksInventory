@@ -18,3 +18,7 @@ function asset($asset){
 function page_url($page){
     return BASE_URL . "?p=$page";
 }
+
+function is_post(){
+    return ($_SERVER['REQUEST_METHOD'])=== 'POST';
+}
