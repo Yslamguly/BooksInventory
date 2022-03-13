@@ -2,11 +2,27 @@
     Name,Author,ISBN,ReleaseDate,Price,desciption
 -->
 <?php  
+
+$errors=[];
+
     if (is_post()){
         //TODO: validate 
         //TODO: save values in the database
         //TODO: success message
+        $name = trim($_POST['name']);
+        $author = trim($_POST['author']);
+        $isbn = trim($_POST['isbn']);
+        $releaseDate = trim($_POST['releaseDate']);
+        $price = trim($_POST['price']);
+        $description = trim($_POST['description']);
 
+        if($name==null){
+            $errors['name'][]="Name is required";
+        }else if(strlen($name)<2){
+            $errors['name'][]="The Name must be at least 2 chars";
+        }
+
+        die_dump($errors);
         die_dump($_POST);
     } 
 
