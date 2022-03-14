@@ -1,0 +1,117 @@
+*{
+    margin:0;
+    padding:0;
+    border:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+    box-sizing: border-box;
+}
+article, aside,details,figcaption, figure,
+footer, header, hgroup, menu, nav, section,main{
+    display:block;
+}
+
+html,
+body{
+    padding:0;
+    margin:auto 0;
+    color:#ebebeb;
+    background-color:da
+}
+header{
+    text-align:center;
+}
+footer{
+    padding:1rem;
+    background-color:rgb(212, 196, 176);
+    text-align: center;
+}
+.card{
+    display: block;
+    border-radius:1rem;
+    box-shadow:3px 3px 5px #454545;
+    padding:1rem;
+}
+.page{
+    padding:1rem;
+}
+.page-upload .card{
+    margin:0 auto;
+    width:500px;
+}
+.form-group label{
+    display:block;
+    margin-bottom:0.5rem;
+}
+.form-group{
+    margin-bottom:1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+.form-group.has-error label{
+    color: tomato;
+}
+.form-group.has-error .form-control{
+    border-color:tomato;
+}
+.validation-error{
+    font-size:0.85rem;
+    color:tomato;
+}
+.form-control{
+    display:block;
+    width: 300px;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #999999;
+}
+
+.btn{
+    cursor: pointer;
+    display:inline-block;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size:1rem;
+    text-decoration: none;
+    color: white;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+
+/*
+Style vavigation bar
+*/
+li{
+    padding:20px;
+}
+a{
+    color:white;
+    text-decoration:none;
+}
+.zone {
+    cursor:pointer;
+    color:#FFF;
+    font-size:1.7em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    transition: all 0.3s linear;
+}
+.main-nav{
+    display:flex;
+    list-style: none;
+    font-size:0.7em;
+    margin:0;
+}
+
+.green{
+    background: #56B870; /* Old browsers */
+    background: -webkit-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
+}
+.blue{
+    background: #7abcff; /* Old browsers */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */   
+}
