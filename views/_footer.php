@@ -1,6 +1,8 @@
 </main>
 <footer class="zone green">
-        Copyright &copy; something. All rights reserved
+        <div class="container">
+                Copyright &copy; something. All rights reserved
+        </div>
 </footer>
 </body>
 </html>

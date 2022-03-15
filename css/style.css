@@ -19,13 +19,30 @@ body{
     color:#ebebeb;
     background-color:da
 }
+main{
+    padding-top: 100px;
+}
 header{
     text-align:center;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 1000;
 }
+header a{
+    color:white;
+    text-decoration:none;
+}
+
 footer{
     padding:1rem;
     background-color:rgb(212, 196, 176);
     text-align: center;
+}
+.container{
+    margin:0 auto;
+    width: 800px;;
 }
 .card{
     display: block;
@@ -86,12 +103,13 @@ Style vavigation bar
 li{
     padding:20px;
 }
-a{
-    color:white;
-    text-decoration:none;
+li:hover{
+    background: #458857; /* Old browsers */
+    background: -webkit-linear-gradient(top, #4b9c60 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, #4b9c60 0%,#a5c956 100%); /* W3C */
 }
+
 .zone {
-    cursor:pointer;
     color:#FFF;
     font-size:1.7em;
     border-radius:4px;

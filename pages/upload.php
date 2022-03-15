@@ -9,7 +9,7 @@ $errors=[];
        
         $name = trim($_POST['name']);
         $author = trim($_POST['author']);
-        $isbn = trim($_POST['ISBN']);
+        $ISBN = trim($_POST['ISBN']);
         $releaseDate = trim($_POST['releaseDate']);
         $price = trim($_POST['price']);
         $description = trim($_POST['description']);
@@ -40,7 +40,7 @@ $errors=[];
         }
     
 
-        if($isbn==null){
+        if($ISBN==null){
             $errors['ISBN'][]="ISBN is required";
         }
 
@@ -83,28 +83,32 @@ $errors=[];
 ?>
 <div class="page page-upload">
     <form class="card blue" action="/test/?p=upload" method="POST">
-        <div class="form-group has-error">
+        <div class="form-group <?php echo isset($errors['name'])? 'has-error' : ''; ?>">
             <label for="name">Name</label>
             <input type="text" name="name" class="form-control">
-            <p class="validation-error">Name is required</p>
+            <?php if(isset($errors['name'])):?>
+                <p class="validation-error">
+                    <?php echo $errors['name'][0]; ?>
+                </p>
+            <?php endif; ?>    
         </div>   
-        <div class="form-group">
+        <div class="form-group <?php echo isset($errors['author'])? 'has-error' : ''; ?>">
             <label for="author">Author</label>
             <input type="text" name="author" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group <?php echo isset($errors['ISBN'])? 'has-error' : ''; ?>">
             <label for="ISBN">ISBN</label>
             <input type="text" name="ISBN" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group <?php echo isset($errors['releaseDate'])? 'has-error' : ''; ?>">
             <label for="releaseDate">Release Date</label>
             <input type="date" name="releaseDate" class="form-control"> <!--ask-->
         </div>    
-        <div class="form-group">
+        <div class="form-group <?php echo isset($errors['price'])? 'has-error' : ''; ?>">
             <label for="price">Price</label>
             <input type="number" name="price" class="form-control">
         </div>
-        <div class="form-group">
+        <div class="form-group <?php echo isset($errors['description'])? 'has-error' : ''; ?>">
             <label for="desciption">Desciption</label>
             <textarea name="description" class="form-control"></textarea>
         </div>
