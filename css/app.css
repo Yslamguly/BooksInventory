@@ -41,14 +41,17 @@ footer{
     text-align: center;
 }
 .container{
-    margin:0 auto;
-    width: 800px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .card{
     display: block;
     border-radius:1rem;
     box-shadow:3px 3px 5px #454545;
-    padding:1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 450px;
 }
 .page{
     padding:1rem;
@@ -63,6 +66,7 @@ footer{
 }
 .form-group{
     margin-bottom:1rem;
+    margin-left: 3.5rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
 }
@@ -89,6 +93,7 @@ footer{
     display:inline-block;
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    margin-left:3.5rem;
     font-size:1rem;
     text-decoration: none;
     color: white;
@@ -98,17 +103,20 @@ footer{
 }
 
 /*
-Style vavigation bar
+NAVBAR
 */
-li{
-    padding:20px;
+@media only screen and (max-width: 525px){
+    .topnav a{
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 1em;
+        border-radius: 4px;
+    }
 }
-li:hover{
-    background: #458857; /* Old browsers */
-    background: -webkit-linear-gradient(top, #4b9c60 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(top, #4b9c60 0%,#a5c956 100%); /* W3C */
-}
-
 .zone {
     color:#FFF;
     font-size:1.7em;
@@ -116,13 +124,39 @@ li:hover{
     border:1px solid #bbb;
     transition: all 0.3s linear;
 }
-.main-nav{
-    display:flex;
-    list-style: none;
-    font-size:0.7em;
-    margin:0;
-}
-
+/* Add a black background color to the top navigation */
+.topnav {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+  .topnav-right{
+      float: right;
+  }
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.6em;
+    border-radius: 4px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+      background-color: white;
+      color:#56B870;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #98a2cc;
+    color: white;
+  }
+  
 .green{
     background: #56B870; /* Old browsers */
     background: -webkit-linear-gradient(top, #56B870 0%,#a5c956 100%); /* Chrome10+,Safari5.1+ */
@@ -133,3 +167,9 @@ li:hover{
     background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
     background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */   
 }
+
+
+
+/*
+TODO: Layout of the page
+*/

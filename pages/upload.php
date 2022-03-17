@@ -81,11 +81,11 @@ $errors=[];
     } 
 
 ?>
-<div class="page page-upload">
+<div class="container">
     <form class="card blue" action="/test/?p=upload" method="POST">
         <div class="form-group <?php echo isset($errors['name'])? 'has-error' : ''; ?>">
             <label for="name">Name</label>
-            <input type="text" name="name" class="form-control">
+            <input type="text" name="name" class="form-control" value="<?php echo isset($name) ? $name : ''; ?>">
             <?php if(isset($errors['name'])):?>
                 <p class="validation-error">
                     <?php echo $errors['name'][0]; ?>
@@ -94,23 +94,48 @@ $errors=[];
         </div>   
         <div class="form-group <?php echo isset($errors['author'])? 'has-error' : ''; ?>">
             <label for="author">Author</label>
-            <input type="text" name="author" class="form-control">
+            <input type="text" name="author" class="form-control" value="<?php echo isset($author) ? $author : ''; ?>">
+            <?php if(isset($errors['author'])):?>
+                <p class="validation-error">
+                    <?php echo $errors['author'][0]; ?>
+                </p>
+            <?php endif; ?> 
         </div>
         <div class="form-group <?php echo isset($errors['ISBN'])? 'has-error' : ''; ?>">
             <label for="ISBN">ISBN</label>
-            <input type="text" name="ISBN" class="form-control">
+            <input type="text" name="ISBN" class="form-control" value="<?php echo isset($ISBN) ? $ISBN : ''; ?>">
+            <?php if(isset($errors['ISBN'])):?>
+                <p class="validation-error">
+                    <?php echo $errors['ISBN'][0]; ?>
+                </p>
+            <?php endif; ?> 
         </div>
         <div class="form-group <?php echo isset($errors['releaseDate'])? 'has-error' : ''; ?>">
             <label for="releaseDate">Release Date</label>
-            <input type="date" name="releaseDate" class="form-control"> <!--ask-->
+            <input type="date" name="releaseDate" class="form-control" value="<?php echo isset($releaseDate) ? $releaseDate : ''; ?>"> <!--ask-->
+            <?php if(isset($errors['releaseDate'])):?>
+                <p class="validation-error">
+                    <?php echo $errors['releaseDate'][0]; ?>
+                </p>
+            <?php endif; ?> 
         </div>    
         <div class="form-group <?php echo isset($errors['price'])? 'has-error' : ''; ?>">
             <label for="price">Price</label>
-            <input type="number" name="price" class="form-control">
+            <input type="number" name="price" class="form-control" value="<?php echo isset($price) ? $price : ''; ?>">
+            <?php if(isset($errors['price'])):?>
+                <p class="validation-error">
+                    <?php echo $errors['price'][0]; ?>
+                </p>
+            <?php endif; ?> 
         </div>
         <div class="form-group <?php echo isset($errors['description'])? 'has-error' : ''; ?>">
             <label for="desciption">Desciption</label>
-            <textarea name="description" class="form-control"></textarea>
+            <textarea name="description" class="form-control"><?php echo isset($description) ? $description : ''; ?></textarea>
+            <?php if(isset($errors['description'])):?>
+                <p class="validation-error">
+                    <?php echo $errors['description'][0]; ?>
+                </p>
+            <?php endif; ?> 
         </div>
         <div>
             <button type="submit" class="btn green">Upload</button>
