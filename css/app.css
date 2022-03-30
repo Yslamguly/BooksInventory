@@ -1,4 +1,4 @@
-*{
+/* *{
     margin:0;
     padding:0;
     border:0;
@@ -6,7 +6,7 @@
     font:inherit;
     vertical-align:baseline;
     box-sizing: border-box;
-}
+} */
 article, aside,details,figcaption, figure,
 footer, header, hgroup, menu, nav, section,main{
     display:block;
@@ -16,11 +16,11 @@ html,
 body{
     padding:0;
     margin:auto 0;
-    color:#ebebeb;
-    background-color:da
+    color:#000000;
+    background-color:white;
 }
 main{
-    padding-top: 100px;
+    padding-top: 50px;
 }
 header{
     text-align:center;
@@ -41,24 +41,40 @@ footer{
     text-align: center;
 }
 .container{
-    display: flex;
+    display:flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items:center;
+    height:300px;
+}
+.container img{
+    height:120px;
+    padding-bottom: 1rem;
+}
+.container h1{
+    color: #7abcff; /* Old browsers */
+    color: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    color: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */   
+    font-size: 2em;
+    margin:0;
 }
 .card{
-    display: block;
+    display: flex;
+    flex-direction: column;
     border-radius:1rem;
     box-shadow:3px 3px 5px #454545;
     padding: 1rem;
     margin-bottom: 1rem;
     width: 450px;
 }
+form{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:2rem;
+}
 .page{
     padding:1rem;
-}
-.page-upload .card{
-    margin:0 auto;
-    width:500px;
 }
 .form-group label{
     display:block;
@@ -89,14 +105,13 @@ footer{
 }
 
 .btn{
+    display:block;
     cursor: pointer;
-    display:inline-block;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    margin-left:3.5rem;
-    font-size:1rem;
-    text-decoration: none;
-    color: white;
+    height: 2.3rem;
+    width: 318px; 
+    border:none;  
+    color:white;
+    font-size:20px; 
 }
 .btn:hover{
     opacity: 0.8;
@@ -120,8 +135,6 @@ NAVBAR
 .zone {
     color:#FFF;
     font-size:1.7em;
-    border-radius:4px;
-    border:1px solid #bbb;
     transition: all 0.3s linear;
 }
 /* Add a black background color to the top navigation */
@@ -148,12 +161,12 @@ NAVBAR
   /* Change the color of links on hover */
   .topnav a:hover {
       background-color: white;
-      color:#56B870;
+      color:#56e870;
   }
   
   /* Add an active class to highlight the current page */
   .topnav a.active {
-    background-color: #98a2cc;
+    background-color: #343847;
     color: white;
   }
   
