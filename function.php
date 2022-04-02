@@ -55,7 +55,21 @@ function db_close($db)
 {
     $db->close();
 }
+function get_book_by_id($book_id){
+    global $db;
 
-// function max_length($length){
+    $book_id = $db->real_escape_string($book_id);
 
-// }
+    $result = $db->query("SELECT * FROM books WHERE `book_id` = $book_id ");
+
+    return $result->fetch_assoc();
+}
+
+function get_book_list(){
+
+    global $db;
+    
+    $sql = "SELECT * FROM books LIMIT 8";
+
+    return $db->query($sql);
+}

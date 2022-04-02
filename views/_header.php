@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-            <div class="green topnav">
+            <div class="blue topnav">
                     <a href="<?php echo page_url('home'); ?>">Home</a>
                     <a href="<?php echo page_url('about'); ?>">About</a>
                     <a href="<?php echo page_url('upload'); ?>">Upload</a>
@@ -20,6 +20,7 @@
             </div>
      </header>
      <main>
+        
      <!-- <div class="container zone blue">
         <img src="images/Open_book_nae_02.svg.png">
         <h1>Libri</h1>

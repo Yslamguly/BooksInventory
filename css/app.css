@@ -1,4 +1,4 @@
-/* *{
+*{
     margin:0;
     padding:0;
     border:0;
@@ -6,7 +6,7 @@
     font:inherit;
     vertical-align:baseline;
     box-sizing: border-box;
-} */
+}
 article, aside,details,figcaption, figure,
 footer, header, hgroup, menu, nav, section,main{
     display:block;
@@ -45,11 +45,10 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items:center;
-    height:300px;
+    height:70vh;
 }
-.container img{
-    height:120px;
-    padding-bottom: 1rem;
+.cover {
+    width: 30rem;
 }
 .container h1{
     color: #7abcff; /* Old browsers */
@@ -176,12 +175,40 @@ NAVBAR
     background: linear-gradient(top, #56B870 0%,#a5c956 100%); /* W3C */
 }
 .blue{
-    background: #7abcff; /* Old browsers */
-    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
-    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */   
+    background: rgb(164,184,216); /* Old browsers */
+    background: -webkit-linear-gradient(top, #7abcff 0%,rgb(164,184,216) 44%,rgb(164,184,216) 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, rgb(164,184,216) 0%,rgb(164,184,216) 44%,rgb(164,184,216) 100%); /* W3C */   
 }
 
 
+
+
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-gap: 20px;
+}
+.box {
+    margin: 20px;
+    cursor: pointer;
+    background-color: #444;
+    display:block;
+    width: 90%;
+    height:380px;
+    border-radius: 5px;
+}
+
+.box:hover {
+    -webkit-transform: rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    opacity: 0.9;
+}
+.book-item p{
+    margin:20px;
+}
 
 /*
 TODO: Layout of the page
