@@ -65,11 +65,24 @@ function get_book_by_id($book_id){
     return $result->fetch_assoc();
 }
 
-function get_book_list(){
+function get_book_list($offset = 0,$limit = PAGE_LIMIT) 
+{
 
     global $db;
     
-    $sql = "SELECT * FROM books LIMIT 8";
+    $sql = "SELECT * FROM books";
+    $limit=$db->real_escape_string($limit);
+    $offset=$db->real_escape_string($offset);
+
+    $sql .= " LIMIT $limit OFFSET $offset";
 
     return $db->query($sql);
+}
+
+function get_book_count(){
+    global $db;
+    $sql = "SELECT count(*) as count FROM books";
+    $result = $db->query($sql);
+    $row = $result->fetch_assoc();
+    return is_array($row) ? $row['count'] : 0;
 }

@@ -42,13 +42,13 @@ footer{
 }
 .container{
     display:flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items:center;
-    height:70vh;
+    height:50vh;
 }
 .cover {
-    width: 30rem;
+    width: 20rem;
 }
 .container h1{
     color: #7abcff; /* Old browsers */
@@ -56,6 +56,7 @@ footer{
     color: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */   
     font-size: 2em;
     margin:0;
+    text-align: center;
 }
 .card{
     display: flex;
@@ -208,7 +209,38 @@ NAVBAR
 }
 .book-item p{
     margin:20px;
+    color:white;
+    text-decoration:none;
 }
+.book-item a{
+    text-decoration:none;
+}
+.pagination{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+.pagination a{
+    display:block;
+    padding:1rem;
+    color: #000000;
+    background-color: white;
+    text-decoration: none;
+    border-radius:4px;
+}
+.pagination a.active
+{
+    background: rgb(164,184,216); /* Old browsers */
+    background: -webkit-linear-gradient(top, #7abcff 0%,rgb(164,184,216) 44%,rgb(164,184,216) 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, rgb(164,184,216) 0%,rgb(164,184,216) 44%,rgb(164,184,216) 100%); /* W3C */ 
+    color:white; 
+ }
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
 
 /*
 TODO: Layout of the page
