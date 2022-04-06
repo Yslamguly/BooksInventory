@@ -215,6 +215,9 @@ NAVBAR
 .book-item a{
     text-decoration:none;
 }
+.book-item p:hover{
+    color:#000000;
+}
 .pagination{
     display:flex;
     align-items:center;
@@ -241,7 +244,32 @@ NAVBAR
     background-color: #ddd;
 }
 
-
+.alert{
+    padding:8px 15px;
+    margin-bottom:20px;
+    border-radius:5px;
+}
+.alert.alert-success{
+    background:#90d0a0;
+    color:#134c13;
+    border:1px solid #134c13;
+    margin-top:1rem;
+}
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
 /*
-TODO: Layout of the page
+TODO: Save button
 */

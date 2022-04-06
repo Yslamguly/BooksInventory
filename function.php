@@ -1,3 +1,7 @@
+<?php 
+if(!defined("APP_VERSION")){
+    exit;
+}?>
 <?php
 
 function die_dump($variable){

@@ -1,5 +1,7 @@
 <?php
 
+define('APP_VERSION','1.0.0');
+
 require_once "config.php";
 require_once "function.php";
 
@@ -9,6 +11,7 @@ $db = db_connect();
 $page = isset($_GET['p']) ? $_GET['p'] : 'home';
 //$page = ($_GET['p']) ?? 'home';
 
+$errors=[];
 require_once "./views/_header.php";
 if (file_exists("./pages/{$page}.php"))
 {

@@ -1,3 +1,7 @@
+<?php 
+if(!defined("APP_VERSION")){
+    exit;
+}?>
 <?php
     $current_page=isset($_GET['page'])?$_GET['page'] : 1;
     $limit=($current_page-1) * PAGE_LIMIT;

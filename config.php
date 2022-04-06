@@ -1,5 +1,8 @@
 <?php 
-
+if(!defined("APP_VERSION")){
+    exit;
+}?>
+<?php
 define('BASE_URL', 'http://localhost:8888/Test/');
 
 define('BASE_PATH',__DIR__);

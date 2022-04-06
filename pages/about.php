@@ -1,3 +1,7 @@
+<?php 
+if(!defined("APP_VERSION")){
+    exit;
+}?>
 <div class="container"><img class="cover" src="images/books-1673578_1280.png"></div>
 <h1> 
          About 

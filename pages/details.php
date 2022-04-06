@@ -1,4 +1,8 @@
 <?php 
+if(!defined("APP_VERSION")){
+    exit;
+}?>
+<?php 
 
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
