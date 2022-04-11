@@ -9,7 +9,7 @@ $id = isset($_GET['id']) ? $_GET['id'] : null;
 if($id ===null){
     redirect('404');
 }
-$book = get_book_by_id($_GET['id']);
+$book = get_book_by_id($id);
 if($book === null){
     redirect('404');
 }
@@ -28,7 +28,7 @@ if (is_post()){
     if(count($errors)==0){
         $image='fe';
 
-        $sql=$db->prepare("UPDATE books set `name` =?, `author` =?, `isbn`=?, `release_date`=?, `price`=?, `description`=?,`image`=? WHERE `book_id`=?");
+        $sql=$db->prepare("UPDATE books set `name`=?, `author`=?, `isbn`=?, `release_date`=?, `price`=?, `description`=?,`image`=? WHERE `book_id`=?");
         $sql->bind_param('ssssissi',$name,$author,$ISBN,$releaseDate,$price,$description,$image,$id);
         $sql->execute();
         $sql->close();
@@ -38,7 +38,7 @@ if (is_post()){
 // creates a variable for every key in the array
 extract($book, EXTR_SKIP);
 
-$action_url = page_url('edit',['id' => $id]);
+$action_url = page_url('edit', ['id' => $id]);
 ?>
 
 <?php if(isset($_GET['success'])):?>

@@ -47,7 +47,7 @@
                 </div>
                 <div class="form-group <?= isset($errors['description'])? 'has-error' : ''; ?>">
                     <label for="desciption">Desciption</label>
-                    <textarea name="description" class="form-control"><?= isset($description) ? $description : ''; ?></textarea>
+                    <textarea name="description" class="form-control" style="resize: none; height:150px"><?= isset($description) ? $description : ''; ?></textarea>
                     <?php if(isset($errors['description'])):?>
                         <p class="validation-error">
                             <?= $errors['description'][0]; ?>
