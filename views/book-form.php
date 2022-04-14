@@ -1,3 +1,4 @@
+<?php require_once "./views/_header.php";?>
 <form action="<?= $action_url; ?>" method="POST">
             <div class="card blue">
                 <div class="form-group <?= isset($errors['name'])? 'has-error' : ''; ?>">
@@ -18,12 +19,12 @@
                         </p>
                     <?php endif; ?> 
                 </div>
-                <div class="form-group <?= isset($errors['ISBN'])? 'has-error' : ''; ?>">
-                    <label for="ISBN">ISBN</label>
-                    <input type="text" name="ISBN" class="form-control" value="<?php echo isset($ISBN) ? $ISBN : ''; ?>">
-                    <?php if(isset($errors['ISBN'])):?>
+                <div class="form-group <?= isset($errors['isbn'])? 'has-error' : ''; ?>">
+                    <label for="isbn">ISBN</label>
+                    <input type="text" name="isbn" class="form-control" value="<?= isset($isbn) ? $isbn : ''; ?>">
+                    <?php if(isset($errors['isbn'])):?>
                         <p class="validation-error">
-                            <?= $errors['ISBN'][0]; ?>
+                            <?= $errors['isbn'][0]; ?>
                         </p>
                     <?php endif; ?> 
                 </div>

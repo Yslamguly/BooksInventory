@@ -29,8 +29,8 @@ if(!defined("APP_VERSION")){
         }
     
 
-        if($ISBN==null){
-            $errors['ISBN'][]="ISBN is required";
+        if($isbn==null){
+            $errors['isbn'][]="ISBN is required";
         }
 
         // if($releaseDate==null){

@@ -9,7 +9,7 @@ if(!defined("APP_VERSION")){
 
     $total_pages = ceil(get_book_count()/PAGE_LIMIT);
 ?>
-
+<?php require_once "./views/_header.php";?>
 <div class="container">
     <div>
         <img class="cover" src="images/Open_book_nae_02.svg.png">
@@ -36,3 +36,4 @@ if(!defined("APP_VERSION")){
         </a>
     <?php endfor; ?>
 </nav>
+<?php require_once "./views/_footer.php"; ?>

@@ -12,15 +12,12 @@ $page = isset($_GET['p']) ? $_GET['p'] : 'home';
 //$page = ($_GET['p']) ?? 'home';
 
 $errors=[];
-require_once "./views/_header.php";
 if (file_exists("./pages/{$page}.php"))
 {
     include "./pages/{$page}.php";
 }else{
     include "./pages/404.php";
 }
-
-require_once "./views/_footer.php"; 
     
 
 db_close($db_conn);

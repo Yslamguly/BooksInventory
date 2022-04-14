@@ -10,7 +10,7 @@ $errors=[];
        
         $name = trim($_POST['name']);
         $author = trim($_POST['author']);
-        $ISBN = trim($_POST['ISBN']);
+        $isbn = trim($_POST['isbn']);
         $releaseDate = trim($_POST['releaseDate']);
         $price = trim($_POST['price']);
         $description = trim($_POST['description']);
@@ -24,7 +24,7 @@ $errors=[];
             //todo to change this later
             $image='fe';
             $sql = $db->prepare("INSERT INTO books (`name`,`author`,`isbn`,`release_date`,`price`,`description`,`image`) VALUES (?, ?, ?, ?, ?, ?, ?)");
-            $sql->bind_param('ssssiss',$name,$author,$ISBN,$releaseDate,$price,$description,$image);
+            $sql->bind_param('ssssiss',$name,$author,$isbn,$releaseDate,$price,$description,$image);
             $sql->execute();
             //die_dump($sql->sqlstate);
             //die_dump($sql);
@@ -32,7 +32,7 @@ $errors=[];
             
             $new_id = $db -> insert_id;
 
-            redirect('details',['id' => $new_id]);
+            redirect('edit',['id' => $new_id]);
         }
     } 
     $action_url = page_url('upload');
