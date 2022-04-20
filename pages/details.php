@@ -16,9 +16,61 @@ if($book === null){
 
 ?>
 <?php require_once "./views/_header.php";?>
-<div style="padding-top:25px">The book with id  <?= $id ?> has been created</div>
+<div class="more-info-container">
+        <div class="flex-image">
+            <img class="more-info-box" src="<?= $book['image']; ?>" alt="<?= $book['name'];?>">
 
-<h1><?= $book['name']?></h1>
-<h1><?= $book['isbn']?></h1>
+        </div>
+        <div class="flex-info">
+            <h1><?= $book['name'];?></h1>
+            <div class="details">
+                <ul>
+                    <li>Author: <span style="color: green;"><?= $book['author'];?></span> </li>
+                    <li>ISBN: <span> <?= $book['isbn'];?></span> </li>
+                    <li>Released year: <span> <?= strlen($book['release_date'])==0 ? 'undefined' : substr($book['release_date'],0,4);?></span> </li>
+                    <li>Price: <span> <?= $book['price'];?> $</span> </li>
+                </ul>
+            </div>
+            <div>
+                <h2>Overview</h2>
+                    <div class="overview">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
+                        </p>
+                    </div>
+            </div>
+        </div>
+        
+    </div>
 
 <?php require_once "./views/_footer.php"; ?>
