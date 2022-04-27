@@ -16,3 +16,5 @@ define('DB_NAME', 'booksdb');
 
 
 define('PAGE_LIMIT',8);
+
+define('MAX_IMAGE_SIZE',5);

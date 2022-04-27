@@ -22,9 +22,9 @@ $errors=[];
             // success message
 
             //todo to change this later
-            $image='fe';
-            $sql = $db->prepare("INSERT INTO books (`name`,`author`,`isbn`,`release_date`,`price`,`description`,`image`) VALUES (?, ?, ?, ?, ?, ?, ?)");
-            $sql->bind_param('ssssiss',$name,$author,$isbn,$releaseDate,$price,$description,$image);
+            //$image='fe';
+            $sql = $db->prepare("INSERT INTO books (`name`,`author`,`isbn`,`release_date`,`price`,`description`) VALUES (?, ?, ?, ?, ?, ?)");
+            $sql->bind_param('ssssis',$name,$author,$isbn,$releaseDate,$price,$description);
             $sql->execute();
             //die_dump($sql->sqlstate);
             //die_dump($sql);

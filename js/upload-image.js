@@ -13,7 +13,7 @@ window.onload = function() {
         //e.target is the form that was submitted by the user 
         axios.post(e.target.action,formData)
         .then(function(response) { //.then will run when good response will be send
-            consloe.log(response);
+            console.log(response);
         }).catch(function(error) { //catch block will run when error is thrown by the server
             console.log('error happened' + error);
             let htmlError = '';
@@ -26,7 +26,7 @@ window.onload = function() {
                 htmlError += '</ul></div>';
 
                 responseContainer.innerHTML = htmlError;
-                consloe.log(htmlError);
+                console.log(htmlError);
             }
 
         }).finally(function() {
