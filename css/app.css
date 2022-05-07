@@ -257,6 +257,13 @@ NAVBAR
     margin-top:1rem;
     margin-left:0.6rem;
 }
+.alert.alert-error{
+    background:#d09090;
+    color:#4c1313;
+    border:1px solid #4c1313;
+    margin-top:1rem;
+    margin-left:0.6rem;
+}
 .closebtn {
     margin-left: 15px;
     color: white;
