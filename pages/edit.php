@@ -52,12 +52,12 @@ $image_upload_url = page_url('upload-image', ['id' => $id]);
 
 <div id="upload-response"></div>
 
-<!-- <?php if(isset($_GET['success'])):?>
+<!-- <//?php if(isset($_GET['success'])):?>
     <div class="animate__animated animate__bounceInLeft alert alert-success">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         Book has been updated successfully
     </div>
-    <?php endif; ?> -->
+    <//?php endif; ?> -->
 
 <?php require BASE_PATH . '/views/book-form.php';?>
 

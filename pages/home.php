@@ -12,7 +12,7 @@ if(!defined("APP_VERSION")){
 <?php require_once "./views/_header.php";?>
 <div class="container">
     <div>
-        <img class="cover" src="images/uploads/books-1673578_1280.png">
+        <img class="cover" src="images/uploads/front-view-pile-books-with-copy-space_23-2148255858.jpg">
     </div>
 </div>
 

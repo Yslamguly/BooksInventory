@@ -23,7 +23,7 @@ window.onload = function () {
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
                                 Image has been uploaded successfully 
                             </div>`
-                            responseContainer.innerHTML = htmlAlert
+                responseContainer.innerHTML = htmlAlert
 
             })
             .catch(function (error) {
@@ -32,12 +32,10 @@ window.onload = function () {
                 const errorMessages = error.response.data.errors
                 console.log(errorMessages);
                 if (errorMessages.length > 0) {
-                    htmlAlert += "<div class='animate__animated animate__bounceInLeft alert alert-error'><ul>"
-                    for (let i = 0; i < errorMessages.length; i++) {
-                        htmlAlert += `<li>${errorMessages[i]}</li>`
-                    }
-                    htmlAlert += "</ul></div>"
-                    //htmlError+="Goodbye"
+                    htmlAlert += `<div class='animate__animated animate__bounceInLeft alert alert-error'>
+                                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+                                        ${errorMessages}
+                                  </div>`
 
                     responseContainer.innerHTML = htmlAlert
                 }
