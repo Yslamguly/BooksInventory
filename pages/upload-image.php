@@ -44,7 +44,7 @@ if(file_exists($targer_file)){
 if($_FILES['image']['size'] > (MAX_IMAGE_SIZE * 1000000)){
     $errors[] = "The image size can not be greater than" . MAX_IMAGE_SIZE . "MB.";
 }
-$allowed_formats = ['jpg', 'jpeg','img', 'png', 'gif'];
+$allowed_formats = ['jpg', 'jpeg','img', 'png', 'gif','svg'];
 
 if(!in_array($image_file_type, $allowed_formats)){
     $errors = "The selected file format is not allowed.Try these: " .implode(", ", $allowed_formats);

@@ -50,12 +50,14 @@ $image_upload_url = page_url('upload-image', ['id' => $id]);
 
 <?php require_once "./views/_header.php";?>
 
-<?php if(isset($_GET['success'])):?>
+<div id="upload-response"></div>
+
+<!-- <?php if(isset($_GET['success'])):?>
     <div class="animate__animated animate__bounceInLeft alert alert-success">
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         Book has been updated successfully
     </div>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
 <?php require BASE_PATH . '/views/book-form.php';?>
 
@@ -63,7 +65,6 @@ $image_upload_url = page_url('upload-image', ['id' => $id]);
     <div class="card blue">
         <div class="form-group">
             <h1 style="font-size:25px;padding-bottom:1rem;">Upload cover for <?= $book['name'];?></h1>
-            <div id="upload-response"></div>
                 <label>Cover image</label>
                 <input type="file" name="image" class="form-control"/>
         </div>   
