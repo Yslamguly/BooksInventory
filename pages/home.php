@@ -12,8 +12,7 @@ if(!defined("APP_VERSION")){
 <?php require_once "./views/_header.php";?>
 <div class="container">
     <div>
-        <img class="cover" src="images/Open_book_nae_02.svg.png">
-        <h1>Libri</h1>
+        <img class="cover" src="images/uploads/books-1673578_1280.png">
     </div>
 </div>
 
@@ -22,7 +21,7 @@ if(!defined("APP_VERSION")){
 
         <div class="book-item">
             <a href="<?= page_url('details',['id'=>$book['book_id']]);?>">
-                <img class="box zone" src="<?= $book['image']; ?>" alt="<?= $book['name'];?>">
+                <img class="box zone" src="<?= asset("images/uploads/{$book['image']}") ?>" alt="<?= $book['name'];?>">
                 <p><?= $book['name'];?> (<?= strlen($book['release_date'])==0 ? 'undefined' : substr($book['release_date'],0,4);?>)</p>
             </a>
         </div>

@@ -18,7 +18,7 @@ if($book === null){
 <?php require_once "./views/_header.php";?>
 <div class="more-info-container" style="background-color:rgb(245, 236, 213)">
         <div class="flex-image">
-            <img class="more-info-box" src="<?= $book['image']; ?>" alt="<?= $book['name'];?>">
+            <img class="more-info-box" src="<?= asset("images/uploads/{$book['image']}"); ?>" alt="<?= $book['name'];?>">
 
         </div>
         <div class="flex-info">
