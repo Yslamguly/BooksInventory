@@ -66,6 +66,9 @@ $image_upload_url = page_url('upload-image', ['id' => $id]);
         <div class="form-group">
             <h1 style="font-size:25px;padding-bottom:1rem;">Upload cover for <?= $book['name'];?></h1>
                 <label>Cover image</label>
+                <div id="uploaded-image">
+                    <img src="<?= asset("images/uploads/{$book['image']}") ?>" alt="" width="160">
+                </div>
                 <input type="file" name="image" class="form-control"/>
         </div>   
         <div class="form-group">

@@ -7,6 +7,7 @@ window.onload = function () {
         // e.target is the form that was submitted by the user
 
         let responseContainer = document.getElementById('upload-response')
+        let uploadedImage = document.getElementById('uploaded-image')
         let formData = new FormData(e.target)
 
         let inputs = document.querySelectorAll(
@@ -14,15 +15,21 @@ window.onload = function () {
         )
         toggleInputs(inputs)
         let htmlAlert = ''
-
+        let htmlSuccess = ''
         axios
             .post(e.target.action, formData)
             .then(function (response) {
-                // todo handle success
+                const imageUrl = response.data.image_url
+                const message = response.data.message
+                console.log(imageUrl)
+                htmlSuccess += `<img src="${imageUrl}" alt="" width="160">`
+
                 htmlAlert +=`<div class='animate__animated animate__bounceInLeft alert alert-success'>
                                 <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                                Image has been uploaded successfully 
+                                ${message}
                             </div>`
+
+                uploadedImage.innerHTML = htmlSuccess
                 responseContainer.innerHTML = htmlAlert
 
             })

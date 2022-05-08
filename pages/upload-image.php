@@ -69,6 +69,5 @@ $json = [
     'image_url'=> asset('images/uploads/' . $_FILES['image']['name']),
     'message'=> 'Image uploaded successfully',
 ];
-
 http_response_code(200);
 die(json_encode($json));
