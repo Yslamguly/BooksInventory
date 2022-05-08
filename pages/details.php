@@ -37,41 +37,7 @@ if($book === null){
             </div>
             <div>
                 <h2>Overview</h2>
-                    <div class="overview">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente natus id fugiat enim laboriosam debitis eum autem illum incidunt iure, non nulla quidem voluptatem quam sequi molestiae recusandae rem nemo.
-                        </p>
-                    </div>
+                <div class="description"><?= $book['description']; ?></div>
             </div>
         </div>
         
