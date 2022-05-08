@@ -21,8 +21,13 @@ if(!defined("APP_VERSION")){
 
         <div class="book-item">
             <a href="<?= page_url('details',['id'=>$book['book_id']]);?>">
-                <img class="box zone" src="<?= asset("images/uploads/{$book['image']}") ?>" alt="<?= $book['name'];?>">
-                <p><?= $book['name'];?> (<?= strlen($book['release_date'])==0 ? 'undefined' : substr($book['release_date'],0,4);?>)</p>
+                <?php if($book['image']): ?>
+                    <img class="box zone" src="<?= asset("images/uploads/{$book['image']}") ?>" alt="<?= $book['name'];?>">
+                    <p><?= $book['name'];?> (<?= strlen($book['release_date'])==0 ? 'undefined' : substr($book['release_date'],0,4);?>)</p>
+                <?php else: ?>
+                    <img class="box zone" src="https://via.placeholder.com/311x380" alt="<?= $book['name'];?>">    
+                    <p><?= $book['name'];?> (<?= strlen($book['release_date'])==0 ? 'undefined' : substr($book['release_date'],0,4);?>)</p>
+                <?php endif; ?>
             </a>
         </div>
     <?php endwhile;?>
