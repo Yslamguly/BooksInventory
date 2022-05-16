@@ -17,7 +17,7 @@ body{
     padding:0;
     margin:auto 0;
     color:#000000;
-    background-color:white;
+    background: linear-gradient(to right, rgb(246, 229, 94), rgb(59, 193, 194));
 }
 main{
     padding-top: 50px;
@@ -63,10 +63,22 @@ footer{
     display: flex;
     flex-direction: column;
     border-radius:1rem;
-    box-shadow:3px 3px 5px #454545;
+    box-shadow:3px 3px 3px #454545;
     padding: 1rem;
     margin-bottom: 1rem;
     width: 450px;
+    color:rgb(255, 255, 255);
+}
+.form-login{
+    margin-top:11rem;
+}
+.form-register{
+    margin-top:9rem;
+}
+.card h1{
+    text-align: center;
+    font-size: 2em;
+    padding-bottom: 1rem;
 }
 form{
     display: flex;
@@ -109,7 +121,7 @@ form{
     display:block;
     cursor: pointer;
     height: 2.3rem;
-    width: 318px; 
+    width: 300px; 
     border:none;  
     color:white;
     font-size:20px; 
@@ -305,6 +317,7 @@ TODO: Save button
     display:block;
     margin-top:40px;
     margin-left: 0.5rem;
+    margin-bottom: 10px;
     width: 300px;
     height:380px;
     border-radius: 5px;
