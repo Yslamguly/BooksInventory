@@ -27,7 +27,7 @@ if (is_post()){
     require BASE_PATH . '/validations/book-validations.php';
 
     if(count($errors)==0){
-        $image='fe';
+        $image='fe';//bad
 
         $sql=$db->prepare("UPDATE books set `name`=?, `author`=?, `isbn`=?, `release_date`=STR_TO_DATE(?,'%Y-%m-%d'), `price`=?, `description`=?,`image`=? WHERE `book_id`=?");
         $sql->bind_param('ssssissi',$name,$author,$isbn,$releaseDate,$price,$description,$image,$id);

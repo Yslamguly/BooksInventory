@@ -18,7 +18,7 @@
                     <?php endif;?>
                     <div class="topnav-right">
                         <?php if(user_logged_in()) : ?>
-                            <a href="#"><?= current_user()['name']; ?></a>
+                            <a href="#" style="background-color: rgb(239,214,121); color: rgb(112, 158, 233); "><?= current_user()['name']; ?></a>
                             <a href="<?= page_url('logout');?>">Sign out</a> 
                         <?php else : ?>
                                 <a href="<?= page_url('register'); ?>">Register</a>
