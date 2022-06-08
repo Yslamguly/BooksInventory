@@ -1,7 +1,8 @@
 <?php 
 if(!defined("APP_VERSION")){
     exit;
-}?>
+}
+?>
 <?php 
 
 
@@ -24,6 +25,9 @@ if($book === null){
                     <img class="box zone" src="https://via.placeholder.com/350x380" alt="<?= $book['name'];?>">    
                 <?php endif; ?>
 
+               <div>
+                   <h5>Uploaded by <?php echo $book['name']?></h5>
+               </div> 
         </div>
         <div class="flex-info">
             <h1><?= $book['name'];?></h1>
@@ -33,6 +37,14 @@ if($book === null){
                     <li>ISBN: <span> <?= $book['isbn'];?></span> </li>
                     <li>Released year: <span> <?= strlen($book['release_date'])==0 ? 'undefined' : substr($book['release_date'],0,4);?></span> </li>
                     <li>Price: <span> <?= $book['price'];?> $</span> </li>
+                    <?php if($book['user_id']==current_user_id()):?>
+                        <a href="<?= page_url('edit',['id'=>$book['id']]);?>">
+                            edit
+                        </a>
+                        <a href="#">
+                            DELETE
+                        </a>
+                        <?php endif;?>
                 </ul>
             </div>
             <div>
@@ -42,5 +54,9 @@ if($book === null){
         </div>
         
     </div>
+    <?php 
+    //TODO: edit, delete buttons
+    // make sure you delete the photo of the product first then the product itself
+    ?>
 
 <?php require_once "./views/_footer.php"; ?>
