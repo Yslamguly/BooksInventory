@@ -29,6 +29,12 @@ if (is_post()){
 
     if (count($errors) == 0) {
         log_in_user($user_name['user_id']);
+        if(isset($_SESSION['intended'])&&$_SESSION['intended']!==null){ //check if there is anything in the session where user wanted to go
+            $url = $_SESSION['intended'];
+            $_SESSION['intended']=null;
+            header("Location: $url");
+            die();
+        }
         //die_dump(current_user());
         redirect('home');
         //die_dump('ok');
