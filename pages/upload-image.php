@@ -1,5 +1,5 @@
 <?php 
-
+gate();
 header('Content-Type: application/json; charset=UTF-8'); 
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;
@@ -37,9 +37,9 @@ if($is_image == false){
     $errors[] = "The sepcified file is not an image. File type: {$check['mime']}.";
 }
 
-if(file_exists($targer_file)){
-    $errors[] = "The sepcified file already exists";
-}
+// if(file_exists($targer_file)){
+//     $errors[] = "The sepcified file already exists";
+// }
 
 if($_FILES['image']['size'] > (MAX_IMAGE_SIZE * 1000000)){
     $errors[] = "The image size can not be greater than" . MAX_IMAGE_SIZE . "MB.";

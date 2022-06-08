@@ -1,7 +1,8 @@
 <?php 
 if(!defined("APP_VERSION")){
     exit;
-}?>
+}
+?>
 <?php
     $current_page=isset($_GET['page'])?$_GET['page'] : 1;
     $limit=($current_page-1) * PAGE_LIMIT;
@@ -11,9 +12,9 @@ if(!defined("APP_VERSION")){
 ?>
 <?php require_once "./views/_header.php";?>
 <div class="container">
-    <div>
+    <!-- <div>
         <img class="cover" src="images/uploads/front-view-pile-books-with-copy-space_23-2148255858.jpg">
-    </div>
+    </div> -->
 </div>
 
 <div class="zone blue grid-wrapper">

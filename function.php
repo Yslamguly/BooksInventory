@@ -64,7 +64,7 @@ function get_book_by_id($book_id){
 
     $book_id = $db->real_escape_string($book_id);
 
-    $result = $db->query("SELECT * FROM books WHERE `book_id` = $book_id ");
+    $result = $db->query("SELECT books.*, users.name ,users.user_email, users.name  FROM books  LEFT JOIN users ON books.user_id = users.user_id WHERE books.book_id = $book_id");
 
     return $result->fetch_assoc();
 }
@@ -99,7 +99,12 @@ function user_logged_in()
 {
     return isset($_SESSION['user_id']) && $_SESSION['user_id'] !== null;
 }
-
+function current_user_id(){
+    if(!user_logged_in()){
+        return null;
+    }
+    return $_SESSION['user_id'];
+}
 function current_user()
 {
     global $db;
@@ -119,4 +124,14 @@ function log_out_user()
 {
     $_SESSION = [];
     session_destroy();
+}
+function current_url(){
+    $protocol = (isset($_SERVER['HTTPS'])&& $_SERVER['HTTPS']==='on' ? 'https' : 'http'); // check if you use http or https protocol
+    return "{$protocol}://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+}
+function gate(){
+    if(!user_logged_in()){
+        $_SESSION['intended'] = current_url();
+        redirect('login');
+    }
 }
