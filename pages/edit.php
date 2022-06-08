@@ -1,7 +1,9 @@
 <?php 
 if(!defined("APP_VERSION")){
     exit;
-}?>
+}
+gate();
+?>
 <?php 
 
 
@@ -14,7 +16,9 @@ $book = get_book_by_id($id);
 if($book === null){
     redirect('404');
 }
-
+if($book['user_id']!=current_user_id()){
+    redirect('403');
+}
 if (is_post()){
        
     $name = trim($_POST['name']);
