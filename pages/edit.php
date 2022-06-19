@@ -76,7 +76,7 @@ $image_upload_url = page_url('upload-image', ['id' => $id]);
                 <input type="file" name="image" class="form-control"/>
         </div>   
         <div class="form-group">
-            <button type="submit" class="btn green">Upload</button>
+            <button type="submit" class="btn green btn-form">Upload</button>
         </div>
     </div>
 </form> 
