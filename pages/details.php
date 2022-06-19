@@ -26,7 +26,7 @@ if($book === null){
                 <?php endif; ?>
 
                <div>
-                   <h5>Uploaded by <?php echo $book['name']?></h5>
+                   <h5>Uploaded by <?php echo $book['user_name']?></h5>
                </div> 
         </div>
         <div class="flex-info">
@@ -37,14 +37,6 @@ if($book === null){
                     <li>ISBN: <span> <?= $book['isbn'];?></span> </li>
                     <li>Released year: <span> <?= strlen($book['release_date'])==0 ? 'undefined' : substr($book['release_date'],0,4);?></span> </li>
                     <li>Price: <span> <?= $book['price'];?> $</span> </li>
-                    <?php if($book['user_id']==current_user_id()):?>
-                        <a href="<?= page_url('edit',['id'=>$book['id']]);?>">
-                            edit
-                        </a>
-                        <a href="#">
-                            DELETE
-                        </a>
-                        <?php endif;?>
                 </ul>
             </div>
             <div>
