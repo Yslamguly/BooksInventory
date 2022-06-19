@@ -15,10 +15,11 @@
                     <a href="<?= page_url('about'); ?>">About</a>
                     <?php if(user_logged_in()):?>
                         <a href="<?= page_url('upload'); ?>">Upload</a>
+                        <a href="<?= page_url('my_books');?>">My books</a>
                     <?php endif;?>
                     <div class="topnav-right">
                         <?php if(user_logged_in()) : ?>
-                            <a href="#" style="background-color: rgb(239,214,121); color: rgb(112, 158, 233); "><?= current_user()['name']; ?></a>
+                            <a href="#" style="background-color: rgb(239,214,121); color: rgb(112, 158, 233); "><?= current_user()['user_name']; ?></a>
                             <a href="<?= page_url('logout');?>">Sign out</a> 
                         <?php else : ?>
                                 <a href="<?= page_url('register'); ?>">Register</a>

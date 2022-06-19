@@ -14,10 +14,11 @@ footer, header, hgroup, menu, nav, section,main{
 
 html,
 body{
+    min-height: 100vh;
     padding:0;
     margin:auto 0;
     color:#000000;
-    background: linear-gradient(to right, rgb(246, 229, 94), rgb(59, 193, 194));
+    background: linear-gradient(to right, rgb(246, 229, 94), rgb(164,184,216));
 }
 main{
     padding-top: 50px;
@@ -34,22 +35,54 @@ header a{
     color:white;
     text-decoration:none;
 }
-
 footer{
     padding:1rem;
     background-color:rgb(212, 196, 176);
     text-align: center;
+    bottom: 0;
+    width: 100%;
+    height:3.5rem;
 }
 .container{
     display:flex;
     flex-direction: row;
     justify-content: center;
     align-items:center; 
+    /* height:70vh; 
+    background-image: url('../images/uploads/front-view-pile-books-with-copy-space_23-2148255858.jpg');
+    background-size:100% 100%;
+    background-repeat: no-repeat;
+    width:100%; */
+}
+.main-page-container{
     height:70vh; 
     background-image: url('../images/uploads/front-view-pile-books-with-copy-space_23-2148255858.jpg');
     background-size:100% 100%;
     background-repeat: no-repeat;
     width:100%;
+}
+.top-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-95%, -100%);
+    font-size: 2.5rem;
+    color:white;
+    font-family:'Arial black';
+  }
+.centered{
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    transform: translate(-70%, -50%);
+    font-size: 1.5rem;
+}
+.centered a{
+    text-decoration: none;
+    color:white;
+}
+.centered a:hover{
+    color: black;
 }
 .cover {
     width: 100%;
@@ -122,13 +155,28 @@ form{
 }
 
 .btn{
+    text-decoration:none;
     display:block;
     cursor: pointer;
-    height: 2.3rem;
-    width: 300px; 
     border:none;  
     color:white;
+}
+.btn-form{
+    height: 2.3rem;
+    width: 300px;
     font-size:20px; 
+    text-align: center;
+}
+.btn-table{
+    border-radius: 5px;
+    width:60px;
+    text-align:center;
+}
+.btn-add{
+    margin-bottom: 1rem;
+    text-align: center;
+    padding-top:7px;
+    border-radius: 5px;
 }
 .btn:hover{
     opacity: 0.8;
@@ -197,7 +245,14 @@ NAVBAR
     background: -webkit-linear-gradient(top, #7abcff 0%,rgb(164,184,216) 44%,rgb(164,184,216) 100%); /* Chrome10+,Safari5.1+ */
     background: linear-gradient(top, rgb(164,184,216) 0%,rgb(164,184,216) 44%,rgb(164,184,216) 100%); /* W3C */   
 }
-
+.yellow{
+    background: rgb(239,214,121); /* Old browsers */
+    background: -webkit-linear-gradient(top, #f2ff7a 0%,rgb(239,214,121) 44%,rgb(239,214,121) 100%); /* Chrome10+,Safari5.1+ */
+    background: linear-gradient(top, rgb(239,214,121) 0%,rgb(239,214,121) 44%,rgb(239,214,121) 100%); /* W3C */      
+}
+.red{
+    background-color: red;
+}
 
 
 
@@ -240,7 +295,7 @@ NAVBAR
     align-items:center;
     justify-content: center;
     padding-top:1rem;
-    padding-bottom:1rem;
+    padding-bottom:4rem;
 }
 .pagination a{
     display:block;
@@ -309,11 +364,10 @@ TODO: Save button
     column-gap:50px;
     margin:20px;
 }
-@media screen and (max-width:850px) {
+@media screen and (max-width:820px) {
     .more-info-container{
         flex-wrap: wrap;
     }
-    
 }
 .more-info-box {
     cursor: pointer;
@@ -366,4 +420,115 @@ TODO: Save button
 .description{
     font-size: 25px;
     white-space:pre-line;
+    max-width:750px;
 }
+.container-table{
+    flex-direction: column;
+    padding-top:5rem;
+}
+.content-table{
+    border-collapse: collapse;
+    margin: 50px auto 25px auto; 
+    font-size:0.9em;
+    min-width: 400px;
+    border-radius:7px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.content-table thead tr {
+    color: #ffffff;
+    text-align: left;
+    font-size:1.6rem;
+  }
+ .content-table thead{background-color:rgb(239,214,121);} 
+  .content-table th,
+  .content-table td {
+    padding: 12px 15px;
+  }
+  .content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+    /* background-color: #ffffff; */
+    font-size: 1.2rem;
+  }
+
+ tbody tr:hover{
+     background-color:rgb(211, 211, 211);
+ }
+ tbody tr{
+     background-color:rgb(236, 234, 234);
+ }
+  .content-table tbody tr:nth-of-type(even)  {
+    background-color: #ffffff;
+  }
+  .content-table tbody tr:nth-of-type(even):hover{
+    background-color:rgb(211, 211, 211);
+
+  }
+  .content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+  }
+  @media screen and (max-width: 822px) {
+    .content-table{
+        font-size:0.4em;
+        border-collapse: collapse;
+        margin: 50px auto 25px auto; 
+        min-width: 200px;
+        width:400px;
+        border-radius:7px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
+    .content-table thead tr {
+        font-size:1rem;
+        color: #ffffff;
+        text-align: left;
+        
+    }
+  }
+
+  .about-section{
+    background: url(https://m.mobilgo.eu/placekepek/libriborito.png) no-repeat left;
+    background-size: 45%;
+    background-color: #fdfdfd;
+    overflow: hidden;
+    padding: 105px 0;
+}
+.inner-container{
+    width: 55%;
+    float: right;
+    background-color: rgb(239,214,121);
+    color:white;
+    padding: 150px;
+}
+
+.inner-container h1{
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.text{
+    font-size: 20px;
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+.text a{
+    text-decoration: none;
+    color:black;
+}
+
+
+
+
+/* TODO: 
+         do somethig with 'about' page
+         maybe: sort my genres
+*/
+
