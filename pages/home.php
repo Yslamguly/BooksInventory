@@ -11,12 +11,10 @@ if(!defined("APP_VERSION")){
     $total_pages = ceil(get_book_count()/PAGE_LIMIT);
 ?>
 <?php require_once "./views/_header.php";?>
-<div class="container">
-    <!-- <div>
-        <img class="cover" src="images/uploads/front-view-pile-books-with-copy-space_23-2148255858.jpg">
-    </div> -->
+<div class="container main-page-container">
+    <div class="top-left">"A room without books is like a &nbsp;&nbsp;body without a soul."</div>
+    <div class="centered"><a href="https://en.wikipedia.org/wiki/Marcus_Tullius_Cicero">-Marcus Tullius Cicero-</a></div>
 </div>
-
 <div class="zone blue grid-wrapper">
     <?php while($book=$books->fetch_assoc()): ?>
 
