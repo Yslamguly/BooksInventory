@@ -42,7 +42,7 @@
                     <?php endif; ?> 
                 </div>    
                 <div class="form-group">
-                    <button type="submit" class="btn green">Sign up</button>
+                    <button type="submit" class="btn btn-form green">Sign up</button>
                 </div>
                 <div class="form-group">
                     <p>Already a member? <a href="<?= page_url('login')?>">  Sign in</a></p>

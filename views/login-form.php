@@ -31,7 +31,7 @@
                     <?php endif; ?> 
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn green">Sign in</button>
+                    <button type="submit" class="btn btn-form green">Sign in</button>
                 </div>
                 <div class="form-group">
                     <p>Not a member? <a href="<?= page_url('register')?>">Sign up</a></p>
