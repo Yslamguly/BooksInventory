@@ -64,11 +64,19 @@ function get_book_by_id($book_id){
 
     $book_id = $db->real_escape_string($book_id);
 
-    $result = $db->query("SELECT books.*, users.name ,users.user_email, users.name  FROM books  LEFT JOIN users ON books.user_id = users.user_id WHERE books.book_id = $book_id");
+    $result = $db->query("SELECT books.*, users.user_name ,users.user_email FROM books  LEFT JOIN users ON books.user_id = users.user_id WHERE books.book_id = $book_id");
 
     return $result->fetch_assoc();
 }
+function delete_book_by_id($book_id){
+    global $db;
 
+    $book_id = $db->real_escape_string($book_id);
+
+    $sql=$db->prepare("DELETE FROM books where book_id = $book_id");
+    $sql->execute();
+    $sql->close();
+}
 function get_book_list($offset = 0,$limit = PAGE_LIMIT) 
 {
 
@@ -82,7 +90,12 @@ function get_book_list($offset = 0,$limit = PAGE_LIMIT)
 
     return $db->query($sql);
 }
+function get_user_books($id){
+    global $db;
+    $sql = "SELECT * FROM books where `user_id` = $id";
 
+    return $db->query($sql);
+}
 function get_book_count(){
     global $db;
     $sql = "SELECT count(*) as count FROM books";
