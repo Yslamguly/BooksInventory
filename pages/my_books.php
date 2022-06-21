@@ -22,6 +22,15 @@ $user_books = get_user_books($user_id);
 <?php if(empty($user_books)):?>
     <h1>You have no books</h1>
 <?php else: ?>
+    <div class="container my-books-upper-container">
+        <h1>Books Table</h1>
+        <div class="container my-books-text-container">
+            <p class="text">
+                We are one of the largest web-sites devoted for book. We are delighted to provide services for you in order to make people discover the best and make this world better.
+            </p>
+        </div>
+       
+    </div>
     <div class="container container-table">
         <table class="content-table">
             <thead class="">
@@ -32,7 +41,7 @@ $user_books = get_user_books($user_id);
                     <th>Release date</th>
                     <th></th>
                     <th></th>
-                    <th></th>
+                    <th><a style="width:30px;height:30px;text-align:right;font-size:25px" href="<?= page_url('upload')?>" class="btn btn-form btn-add">+</a></th>
                 </tr>
             </thead>
             <tbody>

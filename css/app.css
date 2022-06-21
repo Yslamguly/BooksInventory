@@ -18,7 +18,7 @@ body{
     padding:0;
     margin:auto 0;
     color:#000000;
-    background: linear-gradient(to right, rgb(246, 229, 94), rgb(164,184,216));
+    background: linear-gradient(to right, rgba(246, 229, 94,0.8), rgb(164,184,216));
 }
 main{
     padding-top: 50px;
@@ -422,13 +422,28 @@ TODO: Save button
     white-space:pre-line;
     max-width:750px;
 }
+/* My books */
+.my-books-upper-container{
+    justify-content: center;
+    flex-direction:column;
+    background-color: rgb(239,214,121);
+}
+.my-books-upper-container h1{
+    font-size: 5em;
+    padding-top:2rem;
+    color:white;
+}
+.my-books-text-container{
+    width: 500px;
+    justify-content:left;
+}
 .container-table{
     flex-direction: column;
-    padding-top:5rem;
+    padding-top:3rem;
 }
 .content-table{
     border-collapse: collapse;
-    margin: 50px auto 25px auto; 
+    margin: 0 auto 25px auto; 
     font-size:0.9em;
     min-width: 400px;
     border-radius:7px;
@@ -490,7 +505,7 @@ TODO: Save button
         
     }
   }
-
+/* About page */
   .about-section{
     background: url(https://m.mobilgo.eu/placekepek/libriborito.png) no-repeat left;
     background-size: 45%;
