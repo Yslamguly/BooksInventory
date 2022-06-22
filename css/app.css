@@ -364,11 +364,7 @@ TODO: Save button
     column-gap:50px;
     margin:20px;
 }
-@media screen and (max-width:820px) {
-    .more-info-container{
-        flex-wrap: wrap;
-    }
-}
+
 .more-info-box {
     cursor: pointer;
     background-color: #444;
@@ -435,7 +431,7 @@ TODO: Save button
 }
 .my-books-text-container{
     width: 500px;
-    justify-content:left;
+    justify-content:center;
 }
 .container-table{
     flex-direction: column;
@@ -488,6 +484,9 @@ TODO: Save button
     color: #009879;
   }
   @media screen and (max-width: 822px) {
+    .more-info-container{
+        flex-wrap: wrap;
+    }
     .content-table{
         font-size:0.4em;
         border-collapse: collapse;
@@ -503,6 +502,21 @@ TODO: Save button
         color: #ffffff;
         text-align: left;
         
+    }
+    .main-page-container{
+        background-size:100%;
+        width:100%;
+        background-repeat:no-repeat;
+    }
+    .top-left{
+        font-size: 1.5rem;
+        transform: translate(-95%, -190%);
+        top:45%;
+    }
+    .centered{
+        font-size:0.8rem;
+        transform: translate(-80%, -100%);
+        top:40%;
     }
   }
 /* About page */
@@ -543,7 +557,6 @@ TODO: Save button
 
 
 /* TODO: 
-         do somethig with 'about' page
          maybe: sort my genres
 */
 
