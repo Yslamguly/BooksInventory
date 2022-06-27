@@ -24,10 +24,6 @@ $user_books = get_user_books($user_id);
 <?php else: ?>
     <div class="container my-books-upper-container">
         <h1>Books Table</h1>
-        <div class="container my-books-text-container">
-            <p class="text">
-                We are one of the largest web-sites devoted for book. We are delighted to provide services for you in order to make people discover the best and make this world better.
-            </p>
         </div>
        
     </div>
