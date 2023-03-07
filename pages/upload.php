@@ -25,8 +25,8 @@ $errors=[];
             $sql = $db->prepare("INSERT INTO books (`name`,`author`,`isbn`,`release_date`,`price`,`description`,`user_id`) VALUES (?, ?, ?, ?, ?, ?, ?)");
             $sql->bind_param('ssssisi',$name,$author,$isbn,$releaseDate,$price,$description,$user_id);
             $sql->execute();
-            //die_dump($sql->sqlstate);
-            //die_dump($sql);
+            // die_dump($sql->sqlstate);
+            // die_dump($sql);
             $sql->close();
             
             $new_id = $db -> insert_id;

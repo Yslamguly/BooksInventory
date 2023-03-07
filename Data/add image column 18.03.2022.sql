@@ -9,3 +9,6 @@ CREATE TABLE `books` (
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`book_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+ALTER TABLE booksdb.books ADD user_id int NOT NULL;
+ALTER TABLE booksdb.books ADD CONSTRAINT books_FK FOREIGN KEY (user_id) REFERENCES booksdb.users(user_id) ON UPDATE CASCADE;

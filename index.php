@@ -21,4 +21,4 @@ if (file_exists("./pages/{$page}.php"))
 }
     
 
-db_close($db_conn);
+db_close($db);//should be $db

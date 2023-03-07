@@ -15,13 +15,13 @@ if(is_post()){
         
         $encrypted_password = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = $db->prepare("INSERT INTO users (`name`,`user_email`,`password`) VALUES (?, ?, ?)");
+        $sql = $db->prepare("INSERT INTO users (`name`,`email`,`password`) VALUES (?, ?, ?)");
         $sql->bind_param('sss',$user_name,$email,$encrypted_password);
         $sql->execute();
         $sql->close();
 
         //NEW: After registration the user will be automatically looged in
-        $sql = $db->prepare("SELECT * FROM `users` WHERE `user_email` = ?");
+        $sql = $db->prepare("SELECT * FROM `users` WHERE `email` = ?");
         $sql->bind_param('s', $email);
         $sql->execute();
 

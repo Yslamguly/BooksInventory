@@ -11,7 +11,7 @@ if (is_post()){
     $email = trim($_POST['user_email']);
     $password = trim($_POST['password']);
 
-    $sql = $db->prepare("SELECT * FROM users WHERE user_email = ?");
+    $sql = $db->prepare("SELECT * FROM users WHERE email = ?");
     $sql->bind_param('s', $email);
     //die_dump($sql);
     $sql->execute();
